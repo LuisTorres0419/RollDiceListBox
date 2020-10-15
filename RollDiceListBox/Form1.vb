@@ -6,7 +6,7 @@
 
 Public Class DiceForm
 
-
+    'tim was here...
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
