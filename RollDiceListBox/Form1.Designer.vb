@@ -33,7 +33,7 @@ Partial Class DiceForm
         Me.RollButton.Location = New System.Drawing.Point(247, 681)
         Me.RollButton.Name = "RollButton"
         Me.RollButton.Size = New System.Drawing.Size(235, 127)
-        Me.RollButton.TabIndex = 1
+        Me.RollButton.TabIndex = 0
         Me.RollButton.Text = "&Roll"
         Me.RollButton.UseVisualStyleBackColor = True
         '
@@ -43,16 +43,17 @@ Partial Class DiceForm
         Me.ClearButton.Location = New System.Drawing.Point(525, 681)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(235, 127)
-        Me.ClearButton.TabIndex = 2
+        Me.ClearButton.TabIndex = 1
         Me.ClearButton.Text = "&Clear"
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
+        Me.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ExitButton.Location = New System.Drawing.Point(798, 681)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(235, 127)
-        Me.ExitButton.TabIndex = 3
+        Me.ExitButton.TabIndex = 2
         Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
@@ -64,11 +65,14 @@ Partial Class DiceForm
         Me.DisplayListBox.Name = "DisplayListBox"
         Me.DisplayListBox.Size = New System.Drawing.Size(1279, 504)
         Me.DisplayListBox.TabIndex = 0
+        Me.DisplayListBox.TabStop = False
         '
         'DiceForm
         '
+        Me.AcceptButton = Me.RollButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.ExitButton
         Me.ClientSize = New System.Drawing.Size(1346, 956)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.ClearButton)
