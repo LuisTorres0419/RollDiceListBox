@@ -4,9 +4,11 @@
 'Roll of the Dice 
 'https://github.com/LuisTorres0419/RollDiceListBox.git
 
-Public Class DiceForm
+'add option statements - TJR
+Option Strict On
+Option Explicit On
 
-    'tim was here...
+Public Class DiceForm
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
@@ -25,7 +27,7 @@ Public Class DiceForm
         Dim data(10) As Integer
 
         DisplayListBox.Items.Add("                                                                     
-Roll of the Dice")
+Roll of the Dice") 'use StrDup(), PadLeft, PadRight
 
         For i = 1 To 1000
             randomNumber = CInt(getRandomNumber(1, 6))
@@ -60,8 +62,8 @@ Roll of the Dice")
 
         Do
 
-            value1 = (maximum * Rnd()) + 0.5
-            value2 = (maximum * Rnd()) + 0.5
+            value1 = (maximum * Rnd()) + 0.5 'will not compile with Option Strict On - TJR
+            value2 = (maximum * Rnd()) + 0.5 'will not compile with Option Strict On - TJR
 
         Loop While value1 < minimum - 0.5 Or value1 > maximum + 0.5 Or
  value2 < minimum - 0.5 Or value2 > maximum + 0.5
